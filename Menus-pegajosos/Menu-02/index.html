@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<a href="" class="brand">
+			<img src="image/blue.png" alt="">
+		</a>
+		<nav class="menu">
+			<div class="btn">
+				<i class="fas fa-times close-btn"></i>
+			</div>
+			<ul>
+				
+					<li><a href="">Home</a></li>
+					<li><a href="">Services</a></li>
+					<li><a href="">About</a></li>
+					<li><a href="">Blog</a></li>
+					<li><a href="">Contact</a></li>
+				
+			</ul>
+		</nav>
+		<div class="btn">
+			<i class="fas fa-bars menu-btn"></i>
+		</div>
+	</header>
+	<section class="section-main">
+		<h1>Menu responsive</h1>
+	</section>
+	<section class="section-two">
+		<h2>Marketing Estrategico</h2>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veniam, corporis quaerat sed itaque asperiores, amet maxime a. Deserunt cumque ab sapiente facilis tempora aspernatur ratione sunt quae, nobis architecto.</p>
+	</section>
+	<script type="text/javascript">
+		 //javascript for navigation bar effect on scrol
+		window.addEventListener("scroll",function(){
+			var header = document.querySelector("header");
+			header.classList.toggle('down',window.scrollY > 0);
+             //change logo
+			var logo = document.querySelector(".brand img");
+			if (window.scrollY>0) {
+				logo.setAtrribute('src', 'image/white.png');
+			}else{
+                 logo.setAtrribute('src', 'image/blue.png');
+			}
+
+		});
+         //javascript for responsive navigation sidebar menu
+         var menu = document.querySelector('.menu');
+         var menuBtn = document.querySelector('.menu-btn');
+         var closeBtn = document.querySelector('.close-btn');
+
+         menuBtn.addEventListener("click", () =>{
+         	menu.classList.add('active');
+         });
+
+         closeBtn.addEventListener("click", () =>{
+         	menu.classList.remove('active');
+         });
+
+	</script>
+</body>
+</html>
